@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 130vh;
+    background-color: rgb(247, 192, 192);
+    margin: 0;
+
+}
+
+.contenedor {
+    position: relative;
+
+}
+
+.superior {
+    position: absolute;
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-top: 140px solid #f13b3b;
+    border-bottom: 120px solid transparent;
+
+    transition: transform .90s;
+    transform-origin: top;
+}
+
+.mensaje {
+    position: absolute;
+    padding: 1.5rem;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "brush script mt", cursive;
+    font-size: 10px;
+    background: #daed47;
+    width: 360px;
+    height: 260px;
+    z-index: -1;
+    transition: transform 0.90s ease-in-out;
+}
+
+.mensaje:before {
+    content: "  ";
+    border-style: dotted;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 4px;
+
+}
+
+.mensaje p {
+    position: relative;
+    top: -15px;
+    font-size: 1.2 rem;
+}
+
+.carta {
+    border-left: 180px solid #e90303;
+    border-right: 180px solid #b22c2c;
+    border-top: 140px solid transparent;
+    border-bottom: 120px solid #ff0000;
+
+}
+
+.bx {
+    position: absolute;
+    color: #cff400;
+    top: 110px;
+    right: 155px;
+    font-size: 50px;
+    animation: rotar 1s infinite infinite;
+
+
+}
+
+@keyframes palpitar {
+    0% {
+        transform: scale(1.07);
+    }
+
+    80% {
+
+        transform: scale(1.0);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+.botones {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boton {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #eeff00, #e90303);
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.boton:hover {
+    background-position: 100% 100%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*javascript*/
+.abrir-superior {
+    transform: rotateX('200deg');
+}
+
+.abrir-mensaje {
+    transform: translateY(-200px);
+}
+
+.bx-rotada {
+    color: #f13b3b;
+    animation: none;
+
+}
